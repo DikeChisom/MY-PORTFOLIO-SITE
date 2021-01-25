@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body::before {
+        content: "";
+        background-color: #be0e4e;
+        min-height: 100%;
+        width: 50vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -10;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0px;
+      }
+
+      .image {
+        /* background-image: url("https://celebsupdate.com/wp-content/uploads/2020/01/Kylie-Jenner-Top-Most-Beautiful-Models.jpg");
+        background-repeat: no-repeat;
+        background-position: center; */
+        text-align: center; /* aligns your image to the center */
+        position: relative;
+        z-index: 100;
+      }
+
+      body::after {
+        content: "";
+        background-color: #cc2863;
+        min-height: 100%;
+        width: 50vw;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -10;
+      }
+      .buttom-nav {
+        position: absolute;
+        bottom:0px ;
+        left:0;
+      }
+    
+      .social-links {
+        position: absolute;
+        right: 0;
+        top: 50vh;
+      }
+
+      .main-heading {
+        color: white;
+        align-self: center;
+        font-family: Arial; Verdana, Helvetica, Sans-serif;
+
+      }
+      header {
+        text-align: center;
+      }
+      .logo {
+        width: 50px;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AQUILA AVEION</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="main-heading">AQUILA AVEION</h1>
+    </header>
+
+    <div class="image">
+      <img src="avioen.jpg"/>
+    </div>
+
+    <ul class="social-links">
+      <li>
+        <a href="#" instagram-social> <img alt="instagram" src="https://cdn.exclaimer.com/Handbook%20Images/instagram-icon_24x24.png? _ga=2.35069289.993840259.1610067058-395533321.1610067058" /></a>
+      </li>
+      <li>
+        <a href="#" twitter-social><img alt="twitter" src="https://cdn.exclaimer.com/Handbook%20Images/twitter-icon_24x24.png?_ga=2.65097958.993840259.1610067058-395533321.1610067058" /></a>
+      </li>
+      <li>
+        <a href="#" snapchat- social> <img alt="snapchat" src="https://cdn.exclaimer.com/Handbook%20Images/Snapchat_24.png?_ga=2.65097958.993840259.1610067058-395533321.1610067058" /></a>
+      </li>
+      <li>
+        <a href="#" mail-social> <img alt="mail" src="https://findicons.com/files/icons/1688/web_blog/48/mail2.png" /> </a>
+      </li>
+    </ul>
+    <nav class="buttom-nav">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li><img class="logo" alt="logo" src="../desktop/chisom/logo.jpg" /></li>
+        <li>Gallery</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <script>      
+			fetch("https://hirng-x2021.glitch.me/api").then(async (response) => {
+        var res = await response.json();       
+         document.querySelector(".main-heading").innerHTML = res.name;        
+         document.querySelector("[instagram-social]").href = res.social_media.instagram;      });    
+    </script>  
+  </body>
+</html>
